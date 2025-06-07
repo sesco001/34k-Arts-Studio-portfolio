@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Photography - Makamesco Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #1c1c1c;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1c1c1c;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Event Photography
+  </header>
+
+  <div class="gallery">
+    <a href="#img1"><img src="https://files.catbox.moe/urcgdh.jpg" alt="Event 1" /></a>
+    <a href="#img2"><img src="https://files.catbox.moe/x1wkpx.jpg" alt="Event 2" /></a>
+    <a href="#img3"><img src="https://files.catbox.moe/dso3bp.jpg" alt="Event 3" /></a>
+    <!--
+    <a href="#img4"><img src="https://images.unsplash.com/photo-1592195001300-fd6a07c8e04c" alt="Event 4" /></a>
+    <a href="#img5"><img src="https://images.unsplash.com/photo-1573164574472-cb89e39749d0" alt="Event 5" /></a>
+    <a href="#img6"><img src="https://images.unsplash.com/photo-1615461066843-c9e9769bc3d3" alt="Event 6" /></a>
+  </div>
+
+  <!-- Lightbox Images -->
+  <div id="img1" class="lightbox"><img src="https://files.catbox.moe/urcgdh.jpg" alt=""></div>
+  <div id="img2" class="lightbox"><img src="https://files.catbox.moe/x1wkpx.jpg" alt=""></div>
+  <div id="img3" class="lightbox"><img src="https://files.catbox.moe/dso3bp.jpg" alt=""></div>
+    <!--
+  <div id="img4" class="lightbox"><img src="https://images.unsplash.com/photo-1592195001300-fd6a07c8e04c" alt=""></div>
+  <div id="img5" class="lightbox"><img src="https://images.unsplash.com/photo-1573164574472-cb89e39749d0" alt=""></div>
+  <div id="img6" class="lightbox"><img src="https://images.unsplash.com/photo-1615461066843-c9e9769bc3d3" alt=""></div>
+-->
+  <a href="index.html" class="back-link">← Back to Homepage</a>
+
+  <footer>
+    © 2025 34K ARTS STUDIO- Event Gallery
+  </footer>
+
+</body>
+    </html>
