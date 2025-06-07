@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Makamesco Photography Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1499084732479-de2c02d45fc4') no-repeat center center/cover;
+      margin: 0;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .header {
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin: 10px auto;
+    }
+
+    .typing-text {
+      font-size: 2.5em;
+      font-weight: bold;
+      background: linear-gradient(270deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rotate-text 6s ease infinite;
+    }
+
+    .bio {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+      padding: 0 15px;
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 15px;
+    }
+
+    .category {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      padding: 20px;
+      width: 220px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .category:hover {
+      transform: scale(1.05);
+    }
+
+    .category img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .category-title {
+      margin-top: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      background: linear-gradient(270deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rotate-text 8s linear infinite;
+    }
+
+    .contact-section {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px 20px;
+    }
+
+    .contact-section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    .contact-form button {
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .social-buttons {
+      margin-top: 20px;
+    }
+
+    .social-buttons button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .instagram-btn {
+      background: #E1306C;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Lightbox Styles */
+    #lightbox {
+      position: fixed;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+    }
+
+    #lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    @keyframes rotate-text {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @media (max-width: 600px) {
+      .typing-text {
+        font-size: 1.8em;
+      }
+
+      .category {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://files.catbox.moe/sigghy.jpg" alt="Photographer Profile" class="profile-img" />
+    <div class="typing-text">34K ARTS STUDIO PORTFOLIO</div>
+    <div class="bio">
+      I'm <strong>34KSTUDIO</strong>, a passionate photographer capturing the stories behind the faces, streets, and landscapes of our world. Welcome to my lens-based journey.
+    </div>
+  </div>
+
+  <!-- CATEGORIES SECTION -->
+  <div class="categories">
+    <div class="category" onclick="openLightbox('https://images.unsplash.com/photo-1504257432389-52343af06ae3')">
+      <img src="https://images.unsplash.com/photo-1504257432389-52343af06ae3" alt="Portraits" />
+      <div class="category-title">Portraits</div>
+    </div>
+
+    <div class="category" onclick="openLightbox('https://images.unsplash.com/photo-1506744038136-46273834b3fb')">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature" />
+      <div class="category-title">Nature</div>
+    </div>
+
+    <div class="category" onclick="openLightbox('https://images.unsplash.com/photo-1549921296-3a6b0de5325e')">
+      <img src="https://images.unsplash.com/photo-1549921296-3a6b0de5325e" alt="Events" />
+      <div class="category-title">Events</div>
+    </div>
+
+    <div class="category" onclick="openLightbox('https://images.unsplash.com/photo-1519681393784-d120267933ba')">
+      <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" alt="Street Life" />
+      <div class="category-title">Street Life</div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Full Image"/>
+  </div>
+
+  <!-- CONTACT FORM SECTION -->
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button onclick="alert('Thanks for reaching out! I will get back to you soon.')">Send Message</button>
+    </div>
+
+    <div class="social-buttons">
+      <button class="instagram-btn" onclick="window.open('https://instagram.com/marcas_ke', '_blank')">View Instagram</button>
+      <button class="whatsapp-btn" onclick="window.open('https://wa.me/254739285768', '_blank')">Message on WhatsApp</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 34K ARTS  STUDIO| 
+  </footer>
+
+  <!-- JS Lightbox -->
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+</body>
+  </html>
