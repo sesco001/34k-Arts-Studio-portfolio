@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nature Photography - Makamesco Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0f0d;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #1b1f1d;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(0, 255, 150, 0.3);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: #00ff99;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1b1f1d;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Nature Photography
+  </header>
+
+  <div class="gallery">
+    <a href="#img1"><img src="https://files.catbox.moe/vly6g2.jpg" alt="Nature 1" /></a>
+    <a href="#img2"><img src="https://files.catbox.moe/t9t9pf.jpg" alt="Nature 2" /></a>
+    <a href="#img3"><img src="https://files.catbox.moe/toguav.jpg" alt="Nature 3" /></a>
+    <!--
+    <a href="#img4"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Nature 4" /></a>
+    <a href="#img5"><img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0" alt="Nature 5" /></a>
+    <a href="#img6"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Nature 6" /></a>
+  </div>
+    
+
+  <!-- Lightbox Images -->
+  <div id="img1" class="lightbox"><img src="https://files.catbox.moe/vly6g2.jpg" alt=""></div>
+  <div id="img2" class="lightbox"><img src="https://files.catbox.moe/t9t9pf.jpg" alt=""></div>
+  <div id="img3" class="lightbox"><img src="https://files.catbox.moe/toguav.jpg" alt=""></div>
+    <!--
+  <div id="img4" class="lightbox"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt=""></div>
+  <div id="img5" class="lightbox"><img src="https://images.unsplash.com/photo-1439853949127-fa647821eba0" alt=""></div>
+  <div id="img6" class="lightbox"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt=""></div>
+    -->
+
+  <a href="index.html" class="back-link">← Back to Homepage</a>
+
+  <footer>
+    © 2025 34k ARTS STUDIO- Nature Gallery
+  </footer>
+
+</body>
+</html>
