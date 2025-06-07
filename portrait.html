@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portrait Photography - 34K arts Studio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #222;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Portrait Photography
+  </header>
+
+  <div class="gallery">
+    <a href="#img1"><img src="https://files.catbox.moe/flkwt1.jpg" alt="Portrait 1" /></a>
+    <a href="#img2"><img src="https://files.catbox.moe/4dli0f.jpg" alt="Portrait 2" /></a>
+    <a href="#img3"><img src="https://files.catbox.moe/ee4t1e.jpg" alt="Portrait 3" /></a>
+    <!--
+    <a href="#img4"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Portrait 4" /></a>
+    <a href="#img5"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Portrait 5" /></a>
+    <a href="#img6"><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4" alt="Portrait 6" /></a>
+  </div>
+
+  <!-- Lightbox Images -->
+  <div id="img1" class="lightbox"><img src="https://files.catbox.moe/flkwt1.jpg" alt=""></div>
+  <div id="img2" class="lightbox"><img src="https://files.catbox.moe/4dli0f.jpg" alt=""></div>
+  <div id="img3" class="lightbox"><img src="https://files.catbox.moe/ee4t1e.jpg" alt=""></div>
+    <!--
+  <div id="img4" class="lightbox"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt=""></div>
+  <div id="img5" class="lightbox"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt=""></div>
+  <div id="img6" class="lightbox"><img src="https://images.unsplash.com/photo-1554151228-14d9def656e4" alt=""></div>
+-->
+  <footer>
+    © 2025 34k ARTS Studio - Portrait Gallery
+  </footer>
+
+</body>
+</html>
